@@ -18,12 +18,9 @@ public class ResultPage {
     public void backHome() {
         this.goBackHome.click();
     }
-<<<<<<< HEAD
 
     public void backHome(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.elementToBeClickable(goBackHome)).click();
     }
-=======
->>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 }
