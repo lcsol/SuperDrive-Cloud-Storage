@@ -88,8 +88,11 @@ class CloudStorageApplicationTests {
 		String[] note = homePage.getFirstNote(driver);
 		assertEquals(note[0], NOTE_TITLE);
 		assertEquals(note[1], NOTE_DESCRIPTION);
+<<<<<<< HEAD
 		homePage.deleteNote(driver);
 		Thread.sleep(1000);
+=======
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	@Test
@@ -97,6 +100,7 @@ class CloudStorageApplicationTests {
 		addNote();
 		HomePage homePage = new HomePage(driver);
 		homePage.editNote(NOTE_TITLE_NEW, NOTE_DESCRIPTION_NEW, driver);
+<<<<<<< HEAD
 
 		Thread.sleep(1000);
 		ResultPage resultPage = new ResultPage(driver);
@@ -107,6 +111,13 @@ class CloudStorageApplicationTests {
 		assertEquals(note[1], NOTE_DESCRIPTION_NEW);
 		homePage.deleteNote(driver);
 		Thread.sleep(1000);
+=======
+		ResultPage resultPage = new ResultPage(driver);
+		resultPage.backHome();
+		String[] note = homePage.getFirstNote(driver);
+		assertEquals(note[0], NOTE_TITLE_NEW);
+		assertEquals(note[1], NOTE_DESCRIPTION_NEW);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	@Test
@@ -114,6 +125,7 @@ class CloudStorageApplicationTests {
 		addNote();
 		HomePage homePage = new HomePage(driver);
 		homePage.deleteNote(driver);
+<<<<<<< HEAD
 
 		Thread.sleep(1000);
 		ResultPage resultPage = new ResultPage(driver);
@@ -121,6 +133,11 @@ class CloudStorageApplicationTests {
 
 		assertFalse(homePage.noteExist(driver));
 		Thread.sleep(1000);
+=======
+		ResultPage resultPage = new ResultPage(driver);
+		resultPage.backHome();
+		assertFalse(homePage.noteExist(driver));
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	@Test
@@ -131,8 +148,11 @@ class CloudStorageApplicationTests {
 		assertEquals(credential[0], CRED_URL);
 		assertEquals(credential[1], CRED_USERNAME);
 		assertNotEquals(credential[2], CRED_PASSWORD);
+<<<<<<< HEAD
 		homePage.deleteCredential(driver);
 		Thread.sleep(500);
+=======
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	@Test
@@ -140,17 +160,25 @@ class CloudStorageApplicationTests {
 		addCredential();
 		HomePage homePage = new HomePage(driver);
 		String password = homePage.editCredential(CRED_URL_NEW, CRED_USERNAME_NEW, CRED_PASSWORD_NEW, driver);
+<<<<<<< HEAD
 
 		Thread.sleep(1000);
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.backHome();
 
+=======
+		ResultPage resultPage = new ResultPage(driver);
+		resultPage.backHome();
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 		String[] credential = homePage.getFirstCredential(driver);
 		assertEquals(password, CRED_PASSWORD);
 		assertEquals(credential[0], CRED_URL_NEW);
 		assertEquals(credential[1], CRED_USERNAME_NEW);
+<<<<<<< HEAD
 		homePage.deleteCredential(driver);
 		Thread.sleep(500);
+=======
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	@Test
@@ -158,6 +186,7 @@ class CloudStorageApplicationTests {
 		addCredential();
 		HomePage homePage = new HomePage(driver);
 		homePage.deleteCredential(driver);
+<<<<<<< HEAD
 
 		Thread.sleep(1000);
 		ResultPage resultPage = new ResultPage(driver);
@@ -165,6 +194,9 @@ class CloudStorageApplicationTests {
 
 		assertFalse(homePage.credentialExist(driver));
 		Thread.sleep(500);
+=======
+		assertFalse(homePage.credentialExist(driver));
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 	}
 
 	private void signupAndLogin() {
@@ -179,20 +211,34 @@ class CloudStorageApplicationTests {
 
 	private void addNote() throws InterruptedException {
 		signupAndLogin();
+<<<<<<< HEAD
 		HomePage homePage = new HomePage(driver);
 		homePage.addNewNote(NOTE_TITLE, NOTE_DESCRIPTION, driver);
 
 		Thread.sleep(1000);
+=======
+
+		HomePage homePage = new HomePage(driver);
+		homePage.addNewNote(NOTE_TITLE, NOTE_DESCRIPTION, driver);
+
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.backHome();
 	}
 
 	private void addCredential() throws InterruptedException {
 		signupAndLogin();
+<<<<<<< HEAD
 		HomePage homePage = new HomePage(driver);
 		homePage.addNewCredential(CRED_URL, CRED_USERNAME, CRED_PASSWORD, driver);
 
 		Thread.sleep(1000);
+=======
+
+		HomePage homePage = new HomePage(driver);
+		homePage.addNewCredential(CRED_URL, CRED_USERNAME, CRED_PASSWORD, driver);
+
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
 		ResultPage resultPage = new ResultPage(driver);
 		resultPage.backHome();
 	}

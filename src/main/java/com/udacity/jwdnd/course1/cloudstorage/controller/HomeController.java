@@ -84,10 +84,16 @@ public class HomeController {
     }
 
     @GetMapping("/file/delete/{fileId}")
+<<<<<<< HEAD
     public String deleteFile(@PathVariable int fileId, Model model) {
         fileService.deleteFile(fileId);
         model.addAttribute("Success", "Successfully Delete Your File!");
         return "result";
+=======
+    public String deleteFile(@PathVariable int fileId) {
+        fileService.deleteFile(fileId);
+        return "home";
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
     }
 
     @PostMapping("/note-new")
@@ -170,7 +176,11 @@ public class HomeController {
             e.printStackTrace();
             model.addAttribute("Error", "Something went wrong with the credential delete. Please try again!");
         }
+<<<<<<< HEAD
         return "result";
+=======
+        return "home";
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
     }
 
     @GetMapping("/getDecryptedCredential")

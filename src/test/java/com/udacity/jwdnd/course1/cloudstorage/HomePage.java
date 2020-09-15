@@ -85,19 +85,31 @@ public class HomePage {
     }
 
     public void toNoteTab(WebDriver driver) throws InterruptedException{
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
     }
 
     public void toCredentialTab(WebDriver driver) throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        this.noteTab.click();
+    }
+
+    public void toCredentialTab(WebDriver driver) throws InterruptedException{
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
     }
 
     public void addNewNote(String noteTitle, String noteDescription, WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", noteTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(addNoteButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(noteTitleInput)).sendKeys(noteTitle);
@@ -109,7 +121,11 @@ public class HomePage {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", noteTab);
         String[] results = new String[2];
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
         results[0] = wait.until(ExpectedConditions.elementToBeClickable(noteTitleDisplay)).getText();
         results[1] = wait.until(ExpectedConditions.elementToBeClickable(noteDescriptionDisplay)).getText();
@@ -119,7 +135,11 @@ public class HomePage {
     public void editNote(String noteTitle, String noteDescription, WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", noteTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editNoteButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(noteTitleInput)).clear();
@@ -132,7 +152,11 @@ public class HomePage {
     public void deleteNote(WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", noteTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(deleteNoteButton)).click();
     }
@@ -140,7 +164,11 @@ public class HomePage {
     public boolean noteExist(WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", noteTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(noteTab)).click();
         return !driver.findElements( By.id("noteTitleDisplay") ).isEmpty() &&
                 !driver.findElements( By.id("noteDescriptionDisplay") ).isEmpty();
@@ -148,7 +176,11 @@ public class HomePage {
     public void addNewCredential(String credentialUrl, String credentialUsername, String credentialPassword, WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", credentialsTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(addCredentialButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(urlInput)).sendKeys(credentialUrl);
@@ -161,7 +193,11 @@ public class HomePage {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", credentialsTab);
         String[] results = new String[3];
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
         results[0] = wait.until(ExpectedConditions.elementToBeClickable(urlDisplay)).getText();
         results[1] = wait.until(ExpectedConditions.elementToBeClickable(userNameDisplay)).getText();
@@ -173,7 +209,11 @@ public class HomePage {
     public String editCredential(String credentialUrl, String credentialUsername, String credentialPassword, WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", credentialsTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editCredentialButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(urlInput)).clear();
@@ -190,7 +230,11 @@ public class HomePage {
     public void deleteCredential(WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", credentialsTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
         wait.until(ExpectedConditions.elementToBeClickable(deleteCredentialButton)).click();
     }
@@ -198,7 +242,11 @@ public class HomePage {
     public boolean credentialExist(WebDriver driver) {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("arguments[0].click()", credentialsTab);
+<<<<<<< HEAD
         WebDriverWait wait = new WebDriverWait(driver, 100);
+=======
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+>>>>>>> 2c5de32752b94d8e03eccbe7c01e7b6cd3846f56
         wait.until(ExpectedConditions.elementToBeClickable(credentialsTab)).click();
         return !driver.findElements( By.id("urlDisplay") ).isEmpty() &&
                 !driver.findElements( By.id("userNameDisplay") ).isEmpty() &&
